@@ -1,0 +1,1 @@
+insert into geoLocations(InfluenceId, CountryCode, Country, State,  City,MetroArea) values(1, 'ng','Nigeria','Lagos State','Lagos','Banana Island')

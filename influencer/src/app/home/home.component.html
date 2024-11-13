@@ -1,0 +1,225 @@
+<section id="desktop">
+  <div class="container-fluid mt-5 bg-opacity-100">
+    <div class="row">
+      <div class="col-xl-1"></div>
+      <div
+        class="col-xl-2"
+        *ngFor="let item of this.data.rowOne; index as i"
+        (click)="goToLocation(item.rank)"
+      >
+        <div class="img-container {{ item.containerCssClass }}">
+          <div id="image-top" class="image">
+            <img class=" {{ item.imageCssClass }}" src="{{ item.image }}" />
+          </div>
+          <div class="text">
+            <span>
+              <span class="topRank-text">{{ item.rank }} </span>
+              {{ item.name }} <br />
+              {{ item.totalStringValue }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="row">
+      <div
+        class="col-xl-2 all-content"
+        *ngFor="let item of this.data.rowTwo; index as i"
+        (click)="goToLocation(item.rank)"
+      >
+        <div>
+          <div class="img-container {{ item.containerCssClass }}  ">
+            <div id="image-top" class="image">
+              <img class=" {{ item.imageCssClass }}" src="{{ item.image }}" />
+            </div>
+            <div class="text">
+              <span>
+                <span class="rank-text">{{ item.rank }} </span> {{ item.name }}
+                <br />
+                {{ item.totalStringValue }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="row">
+      <div
+        class="col-xl-2"
+        *ngFor="let item of this.data.rowThree; index as i"
+        (click)="goToLocation(item.rank)"
+      >
+        <div class="img-container {{ item.containerCssClass }} ">
+          <div class="image">
+            <img class="{{ item.imageCssClass }}" src="{{ item.image }}" />
+          </div>
+          <div class="text">
+            <span>
+              <span class="rank-text">{{ item.rank }} </span> {{ item.name }}
+              <br />
+              {{ item.totalStringValue }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="row bg-info">
+      <div
+        class="col-xl-2"
+        *ngFor="let item of this.data.rowFour; index as i"
+        (click)="goToLocation(item.rank)"
+      >
+        <div class="p-2">
+          <div class="img-container">
+            <div class="image">
+              <img class=" {{ item.imageCssClass }}  " src="{{ item.image }}" />
+            </div>
+            <div class="text">
+              <span>
+                <span class="rank-text">{{ item.rank }} </span> {{ item.name }}
+                <br />
+                {{ item.totalStringValue }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============================================== LARGE TABLET ================================== -->
+<section id="large-tablet">
+  <app-large-tablet></app-large-tablet>
+</section>
+<!-- -- =======================================  TABLEST============================================ -- -->
+<section class="container-fluid" id="tablet">
+  <div class="row">
+    <mat-card
+      class="example-card"
+      *ngFor="let item of this.data.topRankedOnly; index as i"
+      (click)="goToLocation(item.rank)"
+    >
+      <mat-card-header>
+        <mat-card-title>
+          <span>
+            <span class="topRank-text">{{ item.rank }} </span> {{ item.name }}
+            {{ item.totalStringValue }}
+          </span></mat-card-title
+        >
+      </mat-card-header>
+      <img mat-card-image src="{{ item.image }}" alt="{{ item.name }}" />
+    </mat-card>
+  </div>
+
+  <div class="row">
+    <mat-card
+      class="example-card col-3"
+      *ngFor="let item of this.data.top4; index as i"
+      (click)="goToLocation(item.rank)"
+    >
+      <mat-card-header>
+        <mat-card-title>
+          <span>
+            <span class="topRank-text">{{ item.rank }} </span>
+          </span></mat-card-title
+        >
+      </mat-card-header>
+      <img mat-card-image src="{{ item.image }}" alt=" {{ item.name }}" />
+      <mat-card-actions>
+        <span>{{ item.name }} {{ item.totalStringValue }} </span>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!--====================================================-->
+
+  <div class="row">
+    <mat-card
+      class="example-card col-3"
+      *ngFor="let item of this.data.from6To27; index as i"
+      (click)="goToLocation(item.rank)"
+    >
+      <mat-card-header>
+        <mat-card-title>
+          <span class="topRank-text">{{ item.rank }} </span>
+        </mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{ item.image }}" alt=" {{ item.name }}" />
+      <mat-card-actions>
+        <span>
+          <span>{{ item.name }} </span> {{ item.totalStringValue }}
+        </span>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div class="row">
+    <div class="col-2"></div>
+    <mat-card
+      class="example-card col-3"
+      *ngFor="let item of this.data.bottom3; index as i"
+      (click)="goToLocation(item.rank)"
+    >
+      <mat-card-header>
+        <mat-card-title>
+          <span class="topRank-text">{{ item.rank }} </span>
+        </mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{ item.image }}" alt=" {{ item.name }}" />
+      <mat-card-actions>
+        <span>
+          <span>{{ item.name }} </span> {{ item.totalStringValue }}
+        </span>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>
+
+<!-- -- =================================MOBILE================================================== -- -->
+
+<section id="mobile">
+  <mat-card
+    class="example-card"
+    *ngFor="let item of this.data.influencersList; index as i"
+    (click)="goToLocation(item.rank)"
+  >
+    <mat-card-header>
+      <mat-card-title>
+        <span>
+          <span class="topRank-text">{{ item.rank }} </span> {{ item.name }}
+          {{ item.totalStringValue }}
+        </span></mat-card-title
+      >
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ item.image }}" alt="Photo of a Shiba Inu" />
+  </mat-card>
+
+  <!-- <div class="container-sm">
+    <div class="row">
+      <div class="col" *ngFor="let item of this.data.influencersList">
+
+ <mat-card>
+ <div class="img-container">
+        <div id="image-top" class="image">
+      <img class=" {{item.imageCssClass}}"  src="{{item.image}}" />
+        </div>
+        <div class="text">
+        <span> <span class="topRank-text">{{item.rank}} </span> {{item.name}}  {{item.totalStringValue}} </span>
+
+        </div>
+      </div> -->
+
+  <!-- </mat-card>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+ -->
+</section>

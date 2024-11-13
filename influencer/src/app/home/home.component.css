@@ -1,0 +1,407 @@
+
+mat-card{
+  background-color: white;
+}
+@media screen and (max-width: 576px) {
+  #desktop {
+    display: none;
+  }
+  #tablet{
+    display: none;
+  }
+    mat-card{
+      background-color: white;
+    }
+
+
+        .example-header-image {
+          background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+          background-size: cover;
+        }
+      #large-tablet {
+        display: none;
+                }
+}
+/*    ==========================TALET========================= */
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  #mobile {
+    display: none;
+  }
+
+  #desktop {
+    display: none;
+  }
+  #tablet{
+    background-color: white;
+  }
+    #large-tablet{
+      display: none;
+    }
+
+}
+/*    ==========================TALET========================= */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+#mobile {
+           display: none;
+        }
+   #desktop {
+          display: none;
+           }
+            #large-tablet {
+               display: none;
+                     }
+
+
+}
+  /* =====================================large tablet================================================= */
+@media screen and (min-width: 992px) and (max-width: 1199.98px){
+#mobile {
+    display: none;
+  }
+
+  #tablet {
+    display: none;
+  }
+     #desktop {
+       display: none;
+     }
+
+}
+/* ========================= XXLARGE=================================== */
+@media screen and (min-width: 1200px) {
+#mobile{
+  display: none;
+}
+#tablet{
+  display: none;
+}
+#large-tablet {
+  display: none;
+}
+
+.topRank-text {
+  font-size: xx-large;
+  color: goldenrod;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+
+
+#test {
+  max-width: 100px
+}
+
+.row-two {
+  max-width: 100px;
+}
+
+#top {
+  max-width: 150px;
+}
+
+/* ============================================================================================================= */
+.top-image {
+  max-width: 250px;
+  margin: 2px;
+  padding: auto;
+}
+
+.top-name {
+  color: blue;
+}
+
+.top-rank {
+  color: gold;
+  font-size: 50px;
+
+}
+
+.top-container {
+  background-color: white;
+
+
+}
+
+/* =================================================================================================================== */
+.top-2-image {
+  max-width: 80px;
+}
+
+.top-2-name {
+  color: aquamarine;
+}
+
+.top-2-rank {
+  color: red;
+
+}
+
+/* =================================================================================================================== */
+.top-3-image {
+  max-width: 70px;
+}
+
+.top-3-name {
+  color: aquamarine;
+}
+
+.top-3-rank {
+  color: red;
+
+}
+
+/* ======================================================================================================== */
+.top-4-image {
+  max-width: 65px;
+}
+
+.top-4-name {
+  color: aquamarine;
+}
+
+.top-4-rank {
+  color: red;
+
+}
+
+/* ===================================================================================================== */
+
+.top-5-image {
+  max-width: 60px;
+}
+
+.top-5-name {
+  color: aquamarine;
+}
+
+.top-5-rank {
+  color: red;
+
+}
+
+/* ================================================================================================ */
+.top20even-image {
+  max-width: 60px;
+}
+
+.top20even-name {
+  color: blue;
+}
+
+.top20even-rank {
+  color: black;
+}
+
+/* ============================================================ */
+.top20odd-image {
+  max-width: 60px;
+}
+
+.top20old-name {
+  color: green
+}
+
+.top20old-rank {
+  color: rebeccapurple;
+}
+
+/* -------------------------------------------------------------------- */
+/* ----------------------------------------------top 30----------------------------------------------------------------- -- */
+.top30even-image {
+  max-width: 45px;
+}
+
+.top30even-name {
+  color: blue;
+}
+
+.top30even-rank {
+  color: black;
+}
+
+/* ============================================================ */
+.top30odd-image {
+  width: 45px;
+}
+
+.top30old-name {
+  color: green
+}
+
+.top30old-rank {
+  color: rebeccapurple;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+.last-image {
+  max-width: 35px;
+
+}
+
+.last-name {
+  color: aqua;
+}
+
+.last-rank {
+  color: red;
+}
+
+/* ----------------------------------========================================-------------------- */
+.top6-container {
+  margin-top: -250px;
+  flex-wrap: nowrap;
+}
+
+.top7-container {
+  margin-top: -250px;
+  float: left;
+
+}
+
+.top8-container {
+  margin-top: -200px;
+  margin-right: 450px;
+  padding-right: 100px;
+
+
+}
+
+
+
+.top9-container {
+  margin-top: -250px;
+  margin-left: 100px;
+  padding-left: 100px;
+  width: max-content;
+
+}
+
+.top10-container {
+  margin-top: -240px;
+  width: fit-content;
+  float: right;
+}
+
+.top11-container {
+  margin-top: -235px;
+
+}
+
+.top12-container {
+  margin-top: -130px;
+
+}
+
+.top13-container {
+  margin-top: -120px;
+
+}
+
+.top14-container {
+  margin-top: -170px;
+
+  width: fit-content;
+  margin-left: 100px;
+  padding: 20px;
+
+}
+
+
+.top15-container {
+  margin-top: -115px;
+
+}
+
+.top16-container {
+  margin-top: -130px;
+}
+
+
+.top17-container {
+  margin-top: -100px;
+
+}
+
+.top18-container {
+  margin-top: 0px;
+
+
+}
+
+.top19-container {
+  width: fit-content;
+
+}
+
+.top20-container {
+  margin-top: -50px;
+  margin-left: 50px;
+
+}
+
+.top21-container {
+  margin-top: -49px;
+
+}
+
+.top22-container {
+  margin-top: -49px;
+
+}
+
+.top23-container {
+  margin-top: -18px;
+  margin-left: 200px;
+  margin-right: 20px;
+  padding-right: 0px;
+
+
+}
+
+.top24-container {
+
+  margin-top: 0px;
+
+}
+
+/*
+.top25-container {
+  margin-top: -18px;
+  margin-right: 50px;
+
+}
+.top26-container {
+  margin-top: -19px;
+
+}
+
+.top27-container {
+  background-color: blue;
+
+
+}
+
+.top28-container {
+
+
+}
+.top29-container {
+  margin-top: -18px;
+
+
+}
+
+.top30-container {
+  margin-top: -19px;
+
+}
+ */
+
+
+
+}

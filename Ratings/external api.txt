@@ -1,0 +1,1071 @@
+
+        public partial class Staus
+        {
+            [JsonProperty("status")]
+            public Status Status { get; set; }
+
+            [JsonProperty("data")]
+            public Data Data { get; set; }
+        }
+
+        public partial class Data
+        {
+            [JsonProperty("id")]
+            public Id Id { get; set; }
+
+            [JsonProperty("general")]
+            public General General { get; set; }
+
+            [JsonProperty("statistics")]
+            public Statistics Statistics { get; set; }
+
+            [JsonProperty("misc")]
+            public Misc Misc { get; set; }
+
+            [JsonProperty("ranks")]
+            public Ranks Ranks { get; set; }
+
+            [JsonProperty("badges")]
+            public string[] Badges { get; set; }
+
+            [JsonProperty("daily")]
+            public Daily[] Daily { get; set; }
+        }
+
+        public partial class Daily
+        {
+            [JsonProperty("date")]
+            public DateTimeOffset Date { get; set; }
+
+            [JsonProperty("subs")]
+            public long Subs { get; set; }
+
+            [JsonProperty("views")]
+            public long Views { get; set; }
+        }
+
+        public partial class General
+        {
+            [JsonProperty("created_at")]
+            public DateTimeOffset CreatedAt { get; set; }
+
+            [JsonProperty("channel_type")]
+            public string ChannelType { get; set; }
+
+            [JsonProperty("geo")]
+            public Geo Geo { get; set; }
+
+            [JsonProperty("branding")]
+            public Branding Branding { get; set; }
+        }
+
+        public partial class Branding
+        {
+            [JsonProperty("avatar")]
+            public Uri Avatar { get; set; }
+
+            [JsonProperty("banner")]
+            public Uri Banner { get; set; }
+
+            [JsonProperty("website")]
+            public Uri Website { get; set; }
+
+            [JsonProperty("social")]
+            public Social Social { get; set; }
+        }
+
+        public partial class Social
+        {
+            [JsonProperty("facebook")]
+            public Uri Facebook { get; set; }
+
+            [JsonProperty("twitter")]
+            public Uri Twitter { get; set; }
+
+            [JsonProperty("twitch")]
+            public object Twitch { get; set; }
+
+            [JsonProperty("instagram")]
+            public Uri Instagram { get; set; }
+
+            [JsonProperty("linkedin")]
+            public object Linkedin { get; set; }
+
+            [JsonProperty("discord")]
+            public object Discord { get; set; }
+
+            [JsonProperty("tiktok")]
+            public object Tiktok { get; set; }
+        }
+
+        public partial class Geo
+        {
+            [JsonProperty("country_code")]
+            public string CountryCode { get; set; }
+
+            [JsonProperty("country")]
+            public string Country { get; set; }
+        }
+
+        public partial class Id
+        {
+            [JsonProperty("id")]
+            public string IdId { get; set; }
+
+            [JsonProperty("username")]
+            public string Username { get; set; }
+
+            [JsonProperty("cusername")]
+            public string Cusername { get; set; }
+
+            [JsonProperty("handle")]
+            public string Handle { get; set; }
+
+            [JsonProperty("display_name")]
+            public string DisplayName { get; set; }
+        }
+
+        public partial class Misc
+        {
+            [JsonProperty("grade")]
+            public Grade Grade { get; set; }
+
+            [JsonProperty("sb_verified")]
+            public bool SbVerified { get; set; }
+
+            [JsonProperty("made_for_kids")]
+            public bool MadeForKids { get; set; }
+
+            [JsonProperty("tags")]
+            public string[] Tags { get; set; }
+        }
+
+        public partial class Grade
+        {
+            [JsonProperty("color")]
+            public string Color { get; set; }
+
+            [JsonProperty("grade")]
+            public string GradeGrade { get; set; }
+        }
+
+        public partial class Ranks
+        {
+            [JsonProperty("sbrank")]
+            public long Sbrank { get; set; }
+
+            [JsonProperty("subscribers")]
+            public long Subscribers { get; set; }
+
+            [JsonProperty("views")]
+            public long Views { get; set; }
+
+            [JsonProperty("country")]
+            public long Country { get; set; }
+
+            [JsonProperty("channel_type")]
+            public long ChannelType { get; set; }
+        }
+
+        public partial class Statistics
+        {
+            [JsonProperty("total")]
+            public Total Total { get; set; }
+
+            [JsonProperty("growth")]
+            public Growth Growth { get; set; }
+        }
+
+        public partial class Growth
+        {
+            [JsonProperty("subs")]
+            public Dictionary<string, long> Subs { get; set; }
+
+            [JsonProperty("vidviews")]
+            public Dictionary<string, long> Vidviews { get; set; }
+        }
+
+        public partial class Total
+        {
+            [JsonProperty("uploads")]
+            public long Uploads { get; set; }
+
+            [JsonProperty("subscribers")]
+            public long Subscribers { get; set; }
+
+            [JsonProperty("views")]
+            public long Views { get; set; }
+        }
+
+        public partial class Status
+        {
+            [JsonProperty("success")]
+            public bool Success { get; set; }
+
+            [JsonProperty("status")]
+            public long StatusStatus { get; set; }
+        }
+    }
+
+{
+    using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class Temperatures
+    {
+        [JsonProperty("results")]
+        public Result[] Results { get; set; }
+
+        [JsonProperty("status")]
+        public string Status { get; set; }
+    }
+
+    public partial class Result
+    {
+        [JsonProperty("address_components")]
+        public AddressComponent[] AddressComponents { get; set; }
+
+        [JsonProperty("formatted_address")]
+        public string FormattedAddress { get; set; }
+
+        [JsonProperty("geometry")]
+        public Geometry Geometry { get; set; }
+
+        [JsonProperty("place_id")]
+        public string PlaceId { get; set; }
+
+        [JsonProperty("types")]
+        public string[] Types { get; set; }
+    }
+
+    public partial class AddressComponent
+    {
+        [JsonProperty("long_name")]
+        public string LongName { get; set; }
+
+        [JsonProperty("short_name")]
+        public string ShortName { get; set; }
+
+        [JsonProperty("types")]
+        public string[] Types { get; set; }
+    }
+
+    public partial class Geometry
+    {
+        [JsonProperty("bounds")]
+        public Bounds Bounds { get; set; }
+
+        [JsonProperty("location")]
+        public Location Location { get; set; }
+
+        [JsonProperty("location_type")]
+        public string LocationType { get; set; }
+
+        [JsonProperty("viewport")]
+        public Bounds Viewport { get; set; }
+    }
+
+    public partial class Bounds
+    {
+        [JsonProperty("northeast")]
+        public Location Northeast { get; set; }
+
+        [JsonProperty("southwest")]
+        public Location Southwest { get; set; }
+    }
+
+    public partial class Location
+    {
+        [JsonProperty("lat")]
+        public double Lat { get; set; }
+
+        [JsonProperty("lng")]
+        public double Lng { get; set; }
+    }
+}
+
+=====================================================================
+using System;
+    using System.Collections.Generic;
+
+    using System.Globalization;
+    using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+
+    public partial class Temperatures
+    {
+        [JsonProperty("results")]
+        public Result[] Results { get; set; }
+
+        [JsonProperty("status")]
+        public string Status { get; set; }
+    }
+
+    public partial class Result
+    {
+        [JsonProperty("address_components")]
+        public AddressComponent[] AddressComponents { get; set; }
+
+        [JsonProperty("formatted_address")]
+        public string FormattedAddress { get; set; }
+
+        [JsonProperty("geometry")]
+        public Geometry Geometry { get; set; }
+
+        [JsonProperty("place_id")]
+        public string PlaceId { get; set; }
+
+        [JsonProperty("types")]
+        public string[] Types { get; set; }
+    }
+
+    public partial class AddressComponent
+    {
+        [JsonProperty("long_name")]
+        public string LongName { get; set; }
+
+        [JsonProperty("short_name")]
+        public string ShortName { get; set; }
+
+        [JsonProperty("types")]
+        public string[] Types { get; set; }
+    }
+
+    public partial class Geometry
+    {
+        [JsonProperty("bounds")]
+        public Bounds Bounds { get; set; }
+
+        [JsonProperty("location")]
+        public Location Location { get; set; }
+
+        [JsonProperty("location_type")]
+        public string LocationType { get; set; }
+
+        [JsonProperty("viewport")]
+        public Bounds Viewport { get; set; }
+    }
+
+    public partial class Bounds
+    {
+        [JsonProperty("northeast")]
+        public Location Northeast { get; set; }
+
+        [JsonProperty("southwest")]
+        public Location Southwest { get; set; }
+    }
+
+    public partial class Location
+    {
+        [JsonProperty("lat")]
+        public double Lat { get; set; }
+
+        [JsonProperty("lng")]
+        public double Lng { get; set; }
+    }
+}
+========================================================================================
+
+{
+    "results": [
+        {
+            "address_components": [
+                {
+                    "long_name": "United States",
+                    "short_name": "US",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "United States",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": 74.071038,
+                        "lng": -66.885417
+                    },
+                    "southwest": {
+                        "lat": 18.7763,
+                        "lng": 166.9999999
+                    }
+                },
+                "location": {
+                    "lat": 37.09024,
+                    "lng": -95.712891
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": 49.38,
+                        "lng": -66.94
+                    },
+                    "southwest": {
+                        "lat": 25.82,
+                        "lng": -124.39
+                    }
+                }
+            },
+            "place_id": "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
+            "types": [
+                "country",
+                "political"
+            ]
+        }
+    ],
+    "status": "OK"
+}
+=============================================================================================================================================
+{
+    "status": {
+        "success": true,
+        "status": 200
+    },
+    "info": {
+        "access": {
+            "seconds_to_expire": 1387282,
+            "expires_at": "02/17/2023 19:35:50 EST"
+        },
+        "credits": {
+            "available": 54,
+            "premium-credits": 0
+        }
+    },
+    "data": {
+        "id": {
+            "id": "17841400086940211",
+            "username": "pewdiepie",
+            "display_name": "PewDiePie"
+        },
+        "general": {
+            "branding": {
+                "avatar": "https://scontent-atl3-1.xx.fbcdn.net/v/t51.2885-15/242272036_154655546832648_488414337999300749_n.jpg?_nc_sid=86c713&_nc_ohc=L-sMHyjFSXYAX9nVWmj&_nc_ht=scontent-atl3-1.xx&edm=AL-3X8kEAAAA&oh=00_AfB0DFr_Z9PVsjYD4-zSIN2FUQ2eMKNjVDmjyJ4qwWpkFA&oe=63E01EE0",
+                "website": "https://nordvpn.com/pdp"
+            },
+            "media": {
+                "recent": [
+                    {
+                        "id": "18124327942291850",
+                        "time": 1672982649,
+                        "type": "carousel_album",
+                        "post_url": "https://www.instagram.com/p/CnD9aIjpnFF/"
+                    },
+                    {
+                        "id": "18025153345449377",
+                        "time": 1671342967,
+                        "type": "carousel_album",
+                        "post_url": "https://www.instagram.com/p/CmTF9nJp18C/"
+                    },
+                    {
+                        "id": "17998712233532514",
+                        "time": 1667214246,
+                        "type": "carousel_album",
+                        "post_url": "https://www.instagram.com/p/CkYDDTOpziB/"
+                    },
+                    {
+                        "id": "17933486396362089",
+                        "time": 1666695078,
+                        "type": "carousel_album",
+                        "post_url": "https://www.instagram.com/p/CkIk0RkpA-n/"
+                    },
+                    {
+                        "id": "18314578582054983",
+                        "time": 1661693689,
+                        "type": "carousel_album",
+                        "post_url": "https://www.instagram.com/p/ChzhbPVJs87/"
+                    },
+                    {
+                        "id": "17967543616789607",
+                        "time": 1660917457,
+                        "type": "carousel_album",
+                        "post_url": "https://www.instagram.com/p/ChcY4UApgKU/"
+                    }
+                ]
+            }
+        },
+        "statistics": {
+            "total": {
+                "media": 766,
+                "followers": 21699313,
+                "following": 63,
+                "engagement_rate": 7.7139
+            },
+            "average": {
+                "likes": 1664060,
+                "comments": 9792.88
+            },
+            "growth": {
+                "followers": {
+                    "1": 1275,
+                    "3": -3161,
+                    "7": -13547,
+                    "14": -20696,
+                    "30": -36340,
+                    "60": 39564,
+                    "90": -28405,
+                    "180": -130687,
+                    "365": -206639
+                },
+                "media": {
+                    "1": 0,
+                    "3": 0,
+                    "7": 0,
+                    "14": 0,
+                    "30": 1,
+                    "60": -13,
+                    "90": -13,
+                    "180": -9,
+                    "365": -5
+                }
+            }
+        },
+        "misc": {
+            "grade": {
+                "color": "#5ac10e",
+                "grade": "A"
+            },
+            "sb_verified": false
+        },
+        "ranks": {
+            "sbrank": 462,
+            "followers": 462,
+            "following": 8947483,
+            "media": 2657738,
+            "engagement_rate": 2226957
+        },
+        "daily": [
+            {
+                "date": "2023-02-01",
+                "followers": 21699313,
+                "following": 63,
+                "media": 766,
+                "avg_likes": 1664060,
+                "avg_comments": 9792.88
+            },
+            {
+                "date": "2023-01-31",
+                "followers": 21703925,
+                "following": 63,
+                "media": 766,
+                "avg_likes": 1664050,
+                "avg_comments": 9792.94
+            },
+            {
+                "date": "2023-01-30",
+                "followers": 21702650,
+                "following": 63,
+                "media": 766,
+                "avg_likes": 1664050,
+                "avg_comments": 9792.94
+            },
+            {
+                "date": "2023-01-29",
+                "followers": 21704655,
+                "following": 63,
+                "media": 766,
+                "avg_likes": 1664030,
+                "avg_comments": 9794.25
+            },
+            {
+                "date": "2023-01-28",
+                "followers": 21707086,
+                "following": 63,
+                "media": 766,
+                "avg_likes": 1664000,
+                "avg_comments": 9794.25
+            },
+            {
+                "date": "2023-01-27",
+                "followers": 21712713,
+                "following": 63,
+                "media": 766,
+                "avg_likes": 1663950,
+                "avg_comments": 9793.94
+            },
+            {
+                "date": "2023-01-26",
+                "followers": 21716524,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1663890,
+                "avg_comments": 9794.25
+            },
+            {
+                "date": "2023-01-25",
+                "followers": 21717557,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1663760,
+                "avg_comments": 9793.38
+            },
+            {
+                "date": "2023-01-24",
+                "followers": 21717472,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1663480,
+                "avg_comments": 9792.12
+            },
+            {
+                "date": "2023-01-23",
+                "followers": 21716753,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1663190,
+                "avg_comments": 9791.56
+            },
+            {
+                "date": "2023-01-22",
+                "followers": 21716776,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1662990,
+                "avg_comments": 9792.25
+            },
+            {
+                "date": "2023-01-21",
+                "followers": 21717206,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1662730,
+                "avg_comments": 9792.56
+            },
+            {
+                "date": "2023-01-20",
+                "followers": 21718723,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1662430,
+                "avg_comments": 9792.81
+            },
+            {
+                "date": "2023-01-19",
+                "followers": 21720370,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1662270,
+                "avg_comments": 9791.38
+            },
+            {
+                "date": "2023-01-18",
+                "followers": 21722154,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1662150,
+                "avg_comments": 9789.69
+            },
+            {
+                "date": "2023-01-17",
+                "followers": 21724621,
+                "following": 68,
+                "media": 766,
+                "avg_likes": 1662110,
+                "avg_comments": 9789.44
+            },
+            {
+                "date": "2023-01-16",
+                "followers": 21726664,
+                "following": 68,
+                "media": 766,
+                "avg_likes": 1661930,
+                "avg_comments": 9788.81
+            },
+            {
+                "date": "2023-01-15",
+                "followers": 21728252,
+                "following": 68,
+                "media": 766,
+                "avg_likes": 1661520,
+                "avg_comments": 9785.5
+            },
+            {
+                "date": "2023-01-14",
+                "followers": 21730841,
+                "following": 68,
+                "media": 766,
+                "avg_likes": 1661170,
+                "avg_comments": 9784.38
+            },
+            {
+                "date": "2023-01-13",
+                "followers": 21729076,
+                "following": 68,
+                "media": 766,
+                "avg_likes": 1660860,
+                "avg_comments": 9783.75
+            },
+            {
+                "date": "2023-01-12",
+                "followers": 21727019,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1660570,
+                "avg_comments": 9784.5
+            },
+            {
+                "date": "2023-01-11",
+                "followers": 21726671,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1660180,
+                "avg_comments": 9782.75
+            },
+            {
+                "date": "2023-01-10",
+                "followers": 21724531,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1659680,
+                "avg_comments": 9781.44
+            },
+            {
+                "date": "2023-01-09",
+                "followers": 21723166,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1659080,
+                "avg_comments": 9778.19
+            },
+            {
+                "date": "2023-01-08",
+                "followers": 21723707,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1656980,
+                "avg_comments": 9770.75
+            },
+            {
+                "date": "2023-01-07",
+                "followers": 21725369,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1651790,
+                "avg_comments": 9752.56
+            },
+            {
+                "date": "2023-01-06",
+                "followers": 21727030,
+                "following": 69,
+                "media": 766,
+                "avg_likes": 1637390,
+                "avg_comments": 9696.69
+            },
+            {
+                "date": "2023-01-05",
+                "followers": 21734452,
+                "following": 69,
+                "media": 765,
+                "avg_likes": 1732910,
+                "avg_comments": 10178.9
+            },
+            {
+                "date": "2023-01-04",
+                "followers": 21735673,
+                "following": 69,
+                "media": 765,
+                "avg_likes": 1732760,
+                "avg_comments": 10177.2
+            },
+            {
+                "date": "2023-01-03",
+                "followers": 21737141,
+                "following": 68,
+                "media": 765,
+                "avg_likes": 1732460,
+                "avg_comments": 10175.3
+            }
+        ]
+    }
+}
+
+============================================================================================================
+
+{
+    "status": {
+        "success": true,
+        "status": 200
+    },
+    "info": {
+        "access": {
+            "seconds_to_expire": 840004,
+            "expires_at": "02/11/2023 11:57:40 EST"
+        },
+        "credits": {
+            "available": 54,
+            "premium-credits": 0
+        }
+    },
+    "data": {
+        "id": {
+            "id": "193844937315070",
+            "username": "PewDiePie",
+            "display_name": "PewDiePie"
+        },
+        "general": {
+            "branding": {
+                "avatar": "https://scontent.xx.fbcdn.net/v/t1.6435-1/176773739_4361725137193675_4170450347121635223_n.jpg?stp=dst-jpg_p200x200&_nc_cat=1&ccb=1-7&_nc_sid=dbb9e7&_nc_ohc=eclJeIwhJdAAX-HtARx&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=00_AfCUrYGkfTsi0sq8nerQXFvSSsrJ8lEDoy3RtwglE47fAA&oe=64025B84",
+                "banner": "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/241139349_4791703037529214_806362389090770297_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1091cb&_nc_eui2=AeFDXj35RVvp7ZbS97GxeuRhtA7jHF3aHw20DuMcXdofDTEOanDdtNihJQfBlalAcy5_fc-dUnYYevo31TLcE1hS&_nc_ohc=8Girn3hNLO8AX-1mbQ-&_nc_ht=scontent-atl3-1.xx&edm=AJdBtusEAAAA&oh=00_AfCGa0YdZSHw996_414FaQyo92P8f3FMQn9C8"
+            }
+        },
+        "statistics": {
+            "total": {
+                "likes": 7246595,
+                "talking_about": 12408
+            },
+            "growth": {
+                "likes": {
+                    "1": -325,
+                    "3": -904,
+                    "7": -2120,
+                    "14": -3856,
+                    "30": -8719,
+                    "60": -19083,
+                    "90": -28143,
+                    "180": -62112,
+                    "365": -120433
+                },
+                "talking_about": {
+                    "1": -1626,
+                    "3": -1660,
+                    "7": -2476,
+                    "14": -1917,
+                    "30": -3327,
+                    "60": 154,
+                    "90": -24083,
+                    "180": -61989,
+                    "365": -18837
+                }
+            }
+        },
+        "misc": {
+            "grade": {
+                "color": "#f4ab0e",
+                "grade": "B+"
+            },
+            "sb_verified": false
+        },
+        "ranks": {
+            "sbrank": 3743,
+            "likes": 3743,
+            "talking_about": 33656
+        },
+        "daily": [
+            {
+                "date": "2023-02-01",
+                "likes": 7246595,
+                "talking_about": 12408
+            },
+            {
+                "date": "2023-01-31",
+                "likes": 7246907,
+                "talking_about": 13325
+            },
+            {
+                "date": "2023-01-30",
+                "likes": 7247232,
+                "talking_about": 14951
+            },
+            {
+                "date": "2023-01-29",
+                "likes": 7247632,
+                "talking_about": 15273
+            },
+            {
+                "date": "2023-01-28",
+                "likes": 7247811,
+                "talking_about": 14985
+            },
+            {
+                "date": "2023-01-27",
+                "likes": 7248012,
+                "talking_about": 15084
+            },
+            {
+                "date": "2023-01-26",
+                "likes": 7248424,
+                "talking_about": 15985
+            },
+            {
+                "date": "2023-01-25",
+                "likes": 7248808,
+                "talking_about": 15848
+            },
+            {
+                "date": "2023-01-24",
+                "likes": 7249027,
+                "talking_about": 15801
+            },
+            {
+                "date": "2023-01-23",
+                "likes": 7249153,
+                "talking_about": 15617
+            },
+            {
+                "date": "2023-01-22",
+                "likes": 7249446,
+                "talking_about": 15891
+            },
+            {
+                "date": "2023-01-21",
+                "likes": 7249721,
+                "talking_about": 16173
+            },
+            {
+                "date": "2023-01-20",
+                "likes": 7249975,
+                "talking_about": 16480
+            },
+            {
+                "date": "2023-01-19",
+                "likes": 7250206,
+                "talking_about": 16552
+            },
+            {
+                "date": "2023-01-18",
+                "likes": 7250485,
+                "talking_about": 15645
+            },
+            {
+                "date": "2023-01-17",
+                "likes": 7250763,
+                "talking_about": 15242
+            },
+            {
+                "date": "2023-01-16",
+                "likes": 7251053,
+                "talking_about": 15287
+            },
+            {
+                "date": "2023-01-15",
+                "likes": 7251336,
+                "talking_about": 15479
+            },
+            {
+                "date": "2023-01-14",
+                "likes": 7251674,
+                "talking_about": 13610
+            },
+            {
+                "date": "2023-01-13",
+                "likes": 7251891,
+                "talking_about": 11982
+            },
+            {
+                "date": "2023-01-12",
+                "likes": 7252221,
+                "talking_about": 12331
+            },
+            {
+                "date": "2023-01-11",
+                "likes": 7252585,
+                "talking_about": 12609
+            },
+            {
+                "date": "2023-01-10",
+                "likes": 7252917,
+                "talking_about": 12305
+            },
+            {
+                "date": "2023-01-09",
+                "likes": 7253208,
+                "talking_about": 12539
+            },
+            {
+                "date": "2023-01-08",
+                "likes": 7253533,
+                "talking_about": 14169
+            },
+            {
+                "date": "2023-01-07",
+                "likes": 7253871,
+                "talking_about": 16323
+            },
+            {
+                "date": "2023-01-06",
+                "likes": 7254144,
+                "talking_about": 16589
+            },
+            {
+                "date": "2023-01-05",
+                "likes": 7254468,
+                "talking_about": 16412
+            },
+            {
+                "date": "2023-01-04",
+                "likes": 7254793,
+                "talking_about": 17243
+            },
+            {
+                "date": "2023-01-03",
+                "likes": 7255055,
+                "talking_about": 16624
+            }
+        ]
+    }
+}
+
+
+//=================================================================================================================================
+ using (var scope = _scopeFactory.CreateScope())
+            {
+                var _cxt = scope.ServiceProvider.GetRequiredService<DataContext>();
+
+                var all = _cxt.Influencer.Select(x => new InFluencerFilter { Id = x.Id, Name = x.Name }).ToList();
+                List<YouTube> youTubeList = new List<YouTube>();
+                if (true)
+                {
+                    List<InFluencerFilter> filtered = new List<InFluencerFilter>();
+                    var Ids = _cxt.FaceBook.Select(x => x.InfluencerId).Distinct().ToList();
+                    foreach (var n in all)
+                    {
+                        if (!Ids.Contains(n.Id))
+                        {
+                            filtered.Add(n);
+                        }
+                    }
+
+
+                    foreach (var n in filtered)
+                    {
+                        string youtubeRequestUrl = youTubeUrl + n.Name + "&clientid=" + socialBladeClientId + "&token=" + socialBladeToken;
+                        using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
+                        {
+                            client.BaseAddress = new Uri(youtubeRequestUrl);
+                            client.DefaultRequestHeaders.Accept.Clear();
+                            client.DefaultRequestHeaders.Accept.Add(new
+                      System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+                            var json = await client.GetStringAsync(youtubeRequestUrl);
+                            
+                            var results =   JsonConvert.DeserializeObject<YouTubeChannelModel>(json);
+                            if (results != null)
+                            {
+                                var youtube = new AppApi.Enities.YouTube
+                                {
+
+                                    InfluencerId = n.Id,
+                                    Subscribers = results.Data.Statistics.Total.Subscribers,
+                                    Views = results.Data.Statistics.Total.Views
+
+                                };
+                                youTubeList.Add(youtube);
+                            }
+
+                        }
+
+
+                    }
+
+                    await _cxt.AddRangeAsync(youTubeList);
+                    var t = await _cxt.SaveChangesAsync();
+                    _logger.LogInformation("data saved" + " " + t);
+                }
+
+            }
+
+

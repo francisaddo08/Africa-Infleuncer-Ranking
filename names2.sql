@@ -1,0 +1,22 @@
+insert into influencerNames(Name) 
+values('MrBeast'),
+('PewDiePie'),
+('Like Nastya'),
+('Vlad and Niki'),
+('Blackpink'),
+('BANGTANTV'),
+('Justin Bieber'),
+('Dude Perfect'),
+('Marshmello'),
+('EminemMusic'),
+('Ed Sheeran'),
+('Ariana Grande'),
+('Taylor Swift'),
+('Billie Eilish'),
+('JuegaGerman'),
+('Fernanfloo'),
+('Felipe Neto'),
+('Bad Bunny'),
+('whinderssonnunes'),
+('Você Sabia?')
+

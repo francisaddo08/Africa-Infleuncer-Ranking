@@ -1,0 +1,7 @@
+
+
+
+   "Data Source=SQL8003.site4now.net;Initial Catalog=db_a91ea5_influencer;User Id=db_a91ea5_influencer_admin;Password=YOUR_DB_PASSWORD
+   
+   Current connection string :
+Provider=sqloledb;Data Source=SQL8003.site4now.net,1433;Initial Catalog=db_a91ea5_influencerdb;User Id=db_a91ea5_influencerdb_admin;Password=Ngozi@13;

@@ -1,0 +1,322 @@
+.topRank-text {
+  font-size: xx-large;
+  color: goldenrod;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+
+
+#test {
+  max-width: 100px
+}
+
+.row-two {
+  max-width: 100px;
+}
+
+#top {
+  max-width: 150px;
+}
+
+/* ============================================================================================================= */
+.top-image {
+  max-width: 100px;
+  margin: 2px;
+  padding: auto;
+}
+
+.top-name {
+  color: blue;
+}
+
+.top-rank {
+  color: gold;
+  font-size: 50px;
+
+}
+
+.top-container {
+  background-color: white;
+
+
+}
+
+/* =================================================================================================================== */
+.top-2-image {
+  max-width: 80px;
+}
+
+.top-2-name {
+  color: aquamarine;
+}
+
+.top-2-rank {
+  color: red;
+
+}
+
+/* =================================================================================================================== */
+.top-3-image {
+  max-width: 70px;
+}
+
+.top-3-name {
+  color: aquamarine;
+}
+
+.top-3-rank {
+  color: red;
+
+}
+
+/* ======================================================================================================== */
+.top-4-image {
+  max-width: 65px;
+}
+
+.top-4-name {
+  color: aquamarine;
+}
+
+.top-4-rank {
+  color: red;
+
+}
+
+/* ===================================================================================================== */
+
+.top-5-image {
+  max-width: 60px;
+}
+
+.top-5-name {
+  color: aquamarine;
+}
+
+.top-5-rank {
+  color: red;
+
+}
+
+/* ================================================================================================ */
+.top20even-image {
+  max-width: 60px;
+}
+
+.top20even-name {
+  color: blue;
+}
+
+.top20even-rank {
+  color: black;
+}
+
+/* ============================================================ */
+.top20odd-image {
+  max-width: 60px;
+}
+
+.top20old-name {
+  color: green
+}
+
+.top20old-rank {
+  color: rebeccapurple;
+}
+
+/* -------------------------------------------------------------------- */
+/* ----------------------------------------------top 30----------------------------------------------------------------- -- */
+.top30even-image {
+  max-width: 45px;
+}
+
+.top30even-name {
+  color: blue;
+}
+
+.top30even-rank {
+  color: black;
+}
+
+/* ============================================================ */
+.top30odd-image {
+  width: 45px;
+}
+
+.top30old-name {
+  color: green
+}
+
+.top30old-rank {
+  color: rebeccapurple;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+.last-image {
+  max-width: 35px;
+
+}
+
+.last-name {
+  color: aqua;
+}
+
+.last-rank {
+  color: red;
+}
+
+/* ----------------------------------========================================-------------------- */
+.top6-container {
+  margin-top: 0px;
+  flex-wrap: nowrap;
+}
+
+.top7-container {
+  margin-top: 0px;
+  float: left;
+
+}
+
+.top8-container {
+  margin-top: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+
+
+}
+
+
+
+.top9-container {
+  margin-top: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  width: max-content;
+
+}
+
+.top10-container {
+  margin-top: 0px;
+  width: fit-content;
+  float: right;
+}
+
+.top11-container {
+  margin-top: 0px;
+
+}
+
+.top12-container {
+  margin-top: 0px;
+
+}
+
+.top13-container {
+  margin-top: -60px;
+  float: right;
+  margin-left: 20px;
+
+}
+
+.top14-container {
+  margin-top: -53px;
+
+  width: fit-content;
+  margin-left: 0px;
+  padding: 0px;
+
+}
+
+
+.top15-container {
+  margin-top: -40px;
+
+}
+
+.top16-container {
+  margin-top: -39px;
+}
+
+
+.top17-container {
+  margin-top: -40px;
+
+}
+
+.top18-container {
+  margin-top: 0px;
+
+
+}
+
+.top19-container {
+  width: fit-content;
+
+}
+
+.top20-container {
+  margin-top: -20px;
+  margin-left: 0px;
+
+}
+
+.top21-container {
+  margin-top: -19px;
+
+}
+
+.top22-container {
+  margin-top: -18px;
+
+}
+
+.top23-container {
+  margin-top: 0px;
+  margin-left: 0px;
+
+
+}
+
+.top24-container {
+
+  margin-top: 0px;
+
+}
+
+/*
+.top25-container {
+  margin-top: -18px;
+  margin-right: 50px;
+
+}
+.top26-container {
+  margin-top: -19px;
+
+}
+
+.top27-container {
+  background-color: blue;
+
+
+}
+
+.top28-container {
+
+
+}
+.top29-container {
+  margin-top: -18px;
+
+
+}
+
+.top30-container {
+  margin-top: -19px;
+
+}
+ */

@@ -1,0 +1,69 @@
+<section id="desktop">
+
+  <div class="container-fluid mt-5 bg-opacity-100 ">
+<div class=" row "  >
+  <div class="col-lg-1"></div>
+      <div class="col-lg-2 "  *ngFor="let item of this.data.rowOne ; index as i" (click) = "goToLocation(i)">
+   <div >
+      <div class="img-container {{item.containerCssClass}}">
+        <div id="image-top" class="image">
+      <img class=" {{item.imageCssClass}}"  src="{{item.image}}" />
+        </div>
+        <div class="text">
+        <span> <span class="topRank-text">{{item.rank}} </span> {{item.name}} <br> {{item.totalStringValue}} </span>
+
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<!-- ------------------------------------------------------------------------------------------------- -->
+<div class="row " >
+      <div class="col-lg-2 all-content" *ngFor="let item of this.data.rowTwo ; index as i" (click) = "goToLocation(i)">
+   <div>
+      <div class="img-container {{item.containerCssClass}}  ">
+        <div id="image-top" class="image">
+      <img class=" {{item.imageCssClass}}"  src="{{item.image}}" />
+        </div>
+        <div class="text ">
+        <span> <span class="rank-text">{{item.rank}} </span> {{item.name}} <br> {{item.totalStringValue}} </span>
+
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<!-- ------------------------------------------------------------------------------------------------- -->
+<div class=" row" >
+      <div class="col-lg-2" *ngFor="let item of this.data.rowThree ; index as i" (click) = "goToLocation(i)">
+      <div class="img-container {{item.containerCssClass}} ">
+        <div  class="image">
+          <img class="{{item.imageCssClass}}" src="{{item.image}}" />
+        </div>
+        <div class="text">
+
+          <span> <span class="rank-text">{{item.rank}} </span> {{item.name}} <br> {{item.totalStringValue}} </span>
+        </div>
+
+    </div>
+</div>
+</div>
+<!-- ------------------------------------------------------------------------------------------------- -->
+<div class=" row  bg-info" >
+
+      <div class="col-lg-2" *ngFor="let item of this.data.rowFour ; index as i" (click) = "goToLocation(i)">
+   <div class="p-2">
+      <div class="img-container">
+        <div  class="image">
+          <img class=" {{item.imageCssClass}}  "  src="{{item.image}}" />
+        </div>
+        <div class="text">
+         <span> <span class="rank-text">{{item.rank}} </span> {{item.name}} <br> {{item.totalStringValue}} </span>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+</div>
+</section>

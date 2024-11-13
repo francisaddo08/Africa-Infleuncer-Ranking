@@ -1,0 +1,237 @@
+ public partial class Welcome
+    {
+        [JsonProperty("status")]
+        public Status Status { get; set; }
+
+        [JsonProperty("info")]
+        public Info Info { get; set; }
+
+        [JsonProperty("data")]
+        public Data Data { get; set; }
+    }
+
+    public partial class Data
+    {
+        [JsonProperty("id")]
+        public Id Id { get; set; }
+
+        [JsonProperty("general")]
+        public General General { get; set; }
+
+        [JsonProperty("statistics")]
+        public Statistics Statistics { get; set; }
+
+        [JsonProperty("misc")]
+        public Misc Misc { get; set; }
+
+        [JsonProperty("ranks")]
+        public Ranks Ranks { get; set; }
+
+        [JsonProperty("badges")]
+        public string[] Badges { get; set; }
+
+        [JsonProperty("daily")]
+        public Daily[] Daily { get; set; }
+    }
+
+    public partial class Daily
+    {
+        [JsonProperty("date")]
+        public DateTimeOffset Date { get; set; }
+
+        [JsonProperty("subs")]
+        public long Subs { get; set; }
+
+        [JsonProperty("views")]
+        public long Views { get; set; }
+    }
+
+    public partial class General
+    {
+        [JsonProperty("created_at")]
+        public DateTimeOffset CreatedAt { get; set; }
+
+        [JsonProperty("channel_type")]
+        public string ChannelType { get; set; }
+
+        [JsonProperty("geo")]
+        public Geo Geo { get; set; }
+
+        [JsonProperty("branding")]
+        public Branding Branding { get; set; }
+    }
+
+    public partial class Branding
+    {
+        [JsonProperty("avatar")]
+        public Uri Avatar { get; set; }
+
+        [JsonProperty("banner")]
+        public string Banner { get; set; }
+
+        [JsonProperty("website")]
+        public Uri Website { get; set; }
+
+        [JsonProperty("social")]
+        public Social Social { get; set; }
+    }
+
+    public partial class Social
+    {
+        [JsonProperty("facebook")]
+        public object Facebook { get; set; }
+
+        [JsonProperty("twitter")]
+        public object Twitter { get; set; }
+
+        [JsonProperty("twitch")]
+        public object Twitch { get; set; }
+
+        [JsonProperty("instagram")]
+        public Uri Instagram { get; set; }
+
+        [JsonProperty("linkedin")]
+        public object Linkedin { get; set; }
+
+        [JsonProperty("discord")]
+        public object Discord { get; set; }
+
+        [JsonProperty("tiktok")]
+        public object Tiktok { get; set; }
+    }
+
+    public partial class Geo
+    {
+        [JsonProperty("country_code")]
+        public string CountryCode { get; set; }
+
+        [JsonProperty("country")]
+        public string Country { get; set; }
+    }
+
+    public partial class Id
+    {
+        [JsonProperty("id")]
+        public string IdId { get; set; }
+
+        [JsonProperty("username")]
+        public string Username { get; set; }
+
+        [JsonProperty("cusername")]
+        public string Cusername { get; set; }
+
+        [JsonProperty("handle")]
+        public string Handle { get; set; }
+
+        [JsonProperty("display_name")]
+        public string DisplayName { get; set; }
+    }
+
+    public partial class Misc
+    {
+        [JsonProperty("grade")]
+        public Grade Grade { get; set; }
+
+        [JsonProperty("sb_verified")]
+        public bool SbVerified { get; set; }
+
+        [JsonProperty("made_for_kids")]
+        public bool MadeForKids { get; set; }
+
+        [JsonProperty("tags")]
+        public string[] Tags { get; set; }
+    }
+
+    public partial class Grade
+    {
+        [JsonProperty("color")]
+        public string Color { get; set; }
+
+        [JsonProperty("grade")]
+        public string GradeGrade { get; set; }
+    }
+
+    public partial class Ranks
+    {
+        [JsonProperty("sbrank")]
+        public long Sbrank { get; set; }
+
+        [JsonProperty("subscribers")]
+        public long Subscribers { get; set; }
+
+        [JsonProperty("views")]
+        public long Views { get; set; }
+
+        [JsonProperty("country")]
+        public long Country { get; set; }
+
+        [JsonProperty("channel_type")]
+        public long ChannelType { get; set; }
+    }
+
+    public partial class Statistics
+    {
+        [JsonProperty("total")]
+        public Total Total { get; set; }
+
+        [JsonProperty("growth")]
+        public Growth Growth { get; set; }
+    }
+
+    public partial class Growth
+    {
+        [JsonProperty("subs")]
+        public Dictionary<string, long> Subs { get; set; }
+
+        [JsonProperty("vidviews")]
+        public Dictionary<string, long> Vidviews { get; set; }
+    }
+
+    public partial class Total
+    {
+        [JsonProperty("uploads")]
+        public long Uploads { get; set; }
+
+        [JsonProperty("subscribers")]
+        public long Subscribers { get; set; }
+
+        [JsonProperty("views")]
+        public long Views { get; set; }
+    }
+
+    public partial class Info
+    {
+        [JsonProperty("access")]
+        public Access Access { get; set; }
+
+        [JsonProperty("credits")]
+        public Credits Credits { get; set; }
+    }
+
+    public partial class Access
+    {
+        [JsonProperty("seconds_to_expire")]
+        public long SecondsToExpire { get; set; }
+
+        [JsonProperty("expires_at")]
+        public string ExpiresAt { get; set; }
+    }
+
+    public partial class Credits
+    {
+        [JsonProperty("available")]
+        public long Available { get; set; }
+
+        [JsonProperty("premium-credits")]
+        public long PremiumCredits { get; set; }
+    }
+
+    public partial class Status
+    {
+        [JsonProperty("success")]
+        public bool Success { get; set; }
+
+        [JsonProperty("status")]
+        public long StatusStatus { get; set; }
+    }
+}
